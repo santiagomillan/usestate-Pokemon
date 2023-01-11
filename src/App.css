@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: #c9c9c9;
+  /* overflow-x: hidden;
+  font-family: 'Raleway',sans-serif; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  color: #ffff;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 24px;
+  font-size: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.actions{
+  /* background-color: #279c23; */
+  margin: auto;
+display: flex;
+justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.actions button{
+  width: 250px;
+  height: 40px;
+  /* background: var(--red); */
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  /* color: var(--wt); */
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.actions button:hover{
+  transform: scale(1.05);
+}
+
+.add{
+  background-color: #279c23 ;
+}
+
+.delete{
+  background-color: #23499c ;
+}
+
+.clear{
+  background-color: #d80404 ;
+}
+
+.cards{
+  padding-top: 100px;
+}
+
+.cards img{
+  width: 150px;
+}
+
+.pokemon{
+  margin: auto;
+display: flex;
+justify-content: space-around;
 }
