@@ -11,10 +11,24 @@ console.log(count)
         // console.log("Click",count)
       }
 
+    //   const incrBy3 = () => {
+    //     setCounter((prev) => prev + 3);
+    // };
   const restar = () =>{
-    setCount([...count.pop()]);
-    // console.log("Click",count)
+    // const newArr = count.filter( count.findIndex === count.length)
+    // // setCount([...count, count.filter(count => count === count[-1])])
+    // // setCount(prev => ([...prev]));
+    // // console.log("Click",count)
+    // setCount(newArr)
+    setCount(count.slice(0, count.length-1))
+    
   }
+
+  const borrar = () =>{
+    setCount([])
+    
+  }
+
   
   return (
     <body>
@@ -29,17 +43,25 @@ console.log(count)
             <div class="actions">
                 <button onClick={contar} class="add">ADD</button>
                 <button onClick={restar} class="delete">DELETE LAST</button>
-                <button class="clear">CLEAR</button>
+                <button onClick={borrar} class="clear">CLEAR</button>
             </div>
         </section>
-       <section class="pokemon">
+       {/* <section class="pokemon">
        {count?.map(poke => <div class="cards"> 
        <h1>pokemon {poke}</h1>
-          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke}.png`} alt="poke1"/>
+          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke}.png`} alt={`poke${poke}`}/>
           </div>
       )}
-        </section> 
-      
+        </section>  */}
+       <div class="cards-container">
+       {count?.map(poke => <section class="pokemon">
+          <div class="cards"> 
+            <h1>pokemon {poke}</h1>
+            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke}.png`} alt={`poke${poke}`}/>
+          </div>
+          </section>
+      )}
+         </div>
 
       
 

@@ -61,6 +61,29 @@ justify-content: space-around;
   padding-top: 100px;
 }
 
+.pokemon {
+  width: 240px;
+}
+.pokemon img {
+  width: 240px;
+  height: 240px;
+  
+  object-fit: contain;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 26px;
+  place-content: center;
+}
+/* .pokemon {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 26px;
+  place-content: center;
+} */
+
 .cards img{
   width: 150px;
 }
